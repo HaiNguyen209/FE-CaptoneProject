@@ -8,7 +8,7 @@ import '../scss/app.scss';
 
 import PrivateRoute from './PrivateRoute';
 import Home from './pages/Home';
-import SignIn from './pages/SignIn';
+// import SignIn from './pages/SignIn';
 
 const queryClient = new QueryClient();
 const Root = () => (
@@ -16,7 +16,7 @@ const Root = () => (
     <BrowserRouter>
       <div>
         <Switch>
-          <Route path="/sign-in" component={SignIn} />
+          <Route path="/home" component={Home} />
           <PrivateRoute exact path="/" component={Home} />
         </Switch>
       </div>
