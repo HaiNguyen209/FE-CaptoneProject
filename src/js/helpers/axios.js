@@ -3,7 +3,7 @@ import { API } from '../env';
 import { setToken as setTokenStorage, getToken as getTokenStorage } from './storage';
 
 export const api = axios.create({
-  baseURL: API,
+  baseURL: API.TEST,
   timeout: 6000,
   headers: {
     'X-Requested-With': 'XMLHttpRequest',

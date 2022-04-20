@@ -5,10 +5,13 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 
 import 'bootstrap/scss/bootstrap.scss';
 import '../scss/app.scss';
+import '../styles/tailwind.css';
 
-import PrivateRoute from './PrivateRoute';
+// import PrivateRoute from './PrivateRoute';
 import Home from './pages/Home';
-// import SignIn from './pages/SignIn';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
+import Forum from './pages/Forum';
 
 const queryClient = new QueryClient();
 const Root = () => (
@@ -16,8 +19,10 @@ const Root = () => (
     <BrowserRouter>
       <div>
         <Switch>
-          <Route path="/home" component={Home} />
-          <PrivateRoute exact path="/" component={Home} />
+          <Route path="/Sign-in" component={SignIn} />
+          <Route path="/Sign-up" component={SignUp} />
+          <Route path="/Forum" component={Forum} />
+          <Route path="/" component={Home} />
         </Switch>
       </div>
     </BrowserRouter>
