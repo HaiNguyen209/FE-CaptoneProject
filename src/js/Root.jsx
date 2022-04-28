@@ -1,11 +1,9 @@
-/* eslint import/no-extraneous-dependencies: 0 */
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 import 'bootstrap/scss/bootstrap.scss';
 import '../scss/app.scss';
-import '../styles/tailwind.css';
 
 // import PrivateRoute from './PrivateRoute';
 import Home from './pages/Home';
@@ -22,7 +20,7 @@ const Root = () => (
           <Route path="/Sign-in" component={SignIn} />
           <Route path="/Sign-up" component={SignUp} />
           <Route path="/Forum" component={Forum} />
-          <Route path="/" component={Home} />
+          <Route exact path="/" component={Home} />
         </Switch>
       </div>
     </BrowserRouter>
