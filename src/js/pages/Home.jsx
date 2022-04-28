@@ -1,13 +1,13 @@
 import React from 'react';
 import Layout from '../components/common/Layout';
+import Questine from '../components/home/question';
 
-const Home = () => {
-  const content = 'Hello world';
+function Home() {
   return (
     <Layout>
-      {content}
+      <Questine />
     </Layout>
   );
-};
+}
 
 export default Home;

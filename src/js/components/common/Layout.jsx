@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // import { useQuery } from 'react-query';
+import styles from '../../../scss/layout.module.scss';
 import Header from './Header';
 import Footer from './Footer';
 // import { api } from '../../helpers/axios';
@@ -9,7 +10,9 @@ const Layout = ({ children }) => (
   <>
     {/* <Header me={data} /> */}
     <Header />
-    {children}
+    <div className={styles.body}>
+      {children}
+    </div>
     <Footer />
   </>
 );
@@ -21,7 +24,13 @@ const Layout = ({ children }) => (
 // });
 
 // if (data) {
-
+// return (
+//   <>
+//     <Header me={data} />
+//     {children}
+//     <Footer />
+//   </>
+// );
 // } return <></>;
 
 Layout.propTypes = {
